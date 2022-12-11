@@ -77,3 +77,13 @@ h1.logo>a{
 .hamburgur>a>.bottom_bun{
   margin-bottom: 0;
 }
+
+
+
+/*** 1280px ***/
+@media (max-width: 1280px){
+  .gnb_wrap{
+    display: none;
+  }
+}
+/*** 1280px ***/
