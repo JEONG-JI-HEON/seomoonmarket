@@ -15,6 +15,16 @@ router.get('/noticeMain', (req, res) => {
   res.render('noticeMain');
 });
 
+/* 공지사항작성페이지 */
+router.get('/noticeWrite', (req, res) => {
+  res.render('noticeWrite');
+});
+
+/* 공지사항상세페이지 */
+router.get('/noticeRead', (req, res) => {
+  res.render('noticeRead');
+});
+
 
 
 module.exports = router;

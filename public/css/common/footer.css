@@ -34,6 +34,14 @@
   left: 0;
 }
 
+#footer.off::after{
+  display: none;
+}
+
+#footer.off::before{
+  display: none;
+}
+
 .footer_inner {
   position: relative;
   width: 100%;

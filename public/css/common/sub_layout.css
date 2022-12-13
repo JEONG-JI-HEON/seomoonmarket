@@ -1,0 +1,116 @@
+.sub_visual {
+  position: relative;
+  height: 400px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-image: url(../../img/subVisual.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main_slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: table;
+  z-index: 12;
+}
+
+.subVisual_layout {
+  position: relative;
+  text-align: center;
+}
+
+.layout_location {
+  position: relative;
+  margin-top: 36px;
+  width: 100%;
+  text-align: center;
+}
+
+.location_wrap {
+  position: relative;
+  color: #8f8d7f;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location_wrap a {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  padding-right: 34px;
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+}
+
+.location_wrap a:after {
+  content: '';
+  color: rgba(255,255,255,0.5);
+  width: 5px;
+  height: 5px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.5);
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.location_wrap a:last-child {
+  font-weight: bold;
+  color: rgba(255,255,255,1);
+  padding-right: 0;
+  text-decoration: underline;
+}
+
+.location_wrap .location_home {
+  margin-left: 0;
+}
+
+.home_icon {
+  width: 16px;
+  height: 18px;
+  background-image: url(../../img/home_icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+}
+
+
+.sub_section {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.section_inner {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.section_con {
+  padding: 40px 30px 82px;
+  box-sizing: border-box;
+}
+
+.notice_title {
+  width: 100%;
+  padding: 47px 0 29px;
+  min-height: auto;
+  text-align: center;
+  position: relative;
+}
+
+.notice_title>h2 {
+  font-size: 42px;
+  font-weight: bold;
+}

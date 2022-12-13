@@ -62,7 +62,7 @@ h1.logo>a {
   font-size: 20px;
 }
 
-.gnb_menu>a:hover{
+.gnb_menu>a:hover {
   color: #C7B0C2;
 }
 
@@ -78,6 +78,25 @@ h1.logo>a {
   background-image: url(../../img/header_hover.png);
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.conv_menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.conv_menu>li {
+  color: #fff;
+  font-size: 14px;
+  padding: 7px 10px 5px;
+  line-height: 1;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 30px;
+  max-height: 30px;
+  flex-shrink: 0;
 }
 
 .hamburgur {}
@@ -113,15 +132,15 @@ h1.logo>a {
   opacity: 0;
 }
 
-.gnb_menu:nth-child(2) .lnb{
+.gnb_menu:nth-child(2) .lnb {
   left: -50%;
 }
 
-.gnb_menu:nth-child(3) .lnb{
+.gnb_menu:nth-child(3) .lnb {
   left: -100%;
 }
 
-.gnb_menu:nth-child(4) .lnb{
+.gnb_menu:nth-child(4) .lnb {
   left: -180%;
 }
 
@@ -140,7 +159,7 @@ h1.logo>a {
   font-size: 14px;
 }
 
-.lnb>li>a:hover{
+.lnb>li>a:hover {
   color: #C7B0C2;
 }
 

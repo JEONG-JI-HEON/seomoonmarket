@@ -1,0 +1,49 @@
+<title>서문시장 공지사항</title>
+<div class="sub_visual">
+  <div class="main_slider">
+    <div class="subVisual_layout">
+      <div class="layout_txt">
+        <div class="moon"></div>
+        <div class="sec1_title">서문시장</div>
+      </div>
+      <div class="layout_location">
+        <div class="location_wrap">
+          <a href="/" class="location_home">
+            <span class="home_icon"></span>
+          </a>
+          <a href="/noticeMain">커뮤니티</a>
+          <a href="/noticeMain">공지사항</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="sub_section">
+  <div class="section_inner">
+    <div class="section_con">
+      <div class="notice_title">
+        <h2>공지사항</h2>
+      </div>
+      <div class="notice_writeWrap">
+        <form id="noticeWrite" method="post" action="/noticeWriteInfo">
+          <div class="boardInfo">
+            <input type="checkbox" name="noticeCheck" id="noticeCheck">
+            <label class="writeNotice" for="noticeCheck">공지로 작성</label>
+            <input type="text" name="write_user" placeholder="ID">
+            <input type="password" name="user_pw" placeholder="PW">
+          </div>
+          <div class="boardTitle">
+            <input type="text" name="not_tit" id="board_tit" placeholder="제목">
+          </div>
+          <div class="boardCon">
+            <textarea name="not_content" id="" cols="30" rows="20" placeholder="내용"></textarea>
+          </div>
+          <div class="boardBtn">
+            <input type="submit" value="등록">
+            <input type="button" value="취소" onclick="javascript:location.href='/noticeMain'">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

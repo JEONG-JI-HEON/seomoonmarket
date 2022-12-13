@@ -1,0 +1,70 @@
+.notice_writeWrap input{
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.boardInfo{
+  display: flex;
+  align-items: center;
+}
+
+
+.boardInfo .writeNotice{
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.boardInfo input{
+  margin-right: 20px;
+}
+
+.boardInfo input:first-child{
+  margin-right: 10px;
+}
+
+.boardInfo input:last-child{
+  margin-right: 0;
+}
+
+.boardInfo,
+.boardTitle,
+.boardCon{
+  margin-bottom: 20px;
+}
+
+.boardTitle{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+
+.boardTitle input{
+  width: 100%;
+
+}
+
+.boardCon textarea{
+  width: 100%;
+  resize: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.boardBtn{
+  display: flex;
+  justify-content: right;
+  gap: 5px;
+}
+
+.boardBtn input{
+  cursor: pointer;
+  border: 1px solid;
+  background-color: #fff;
+  border-radius: 0;
+}
