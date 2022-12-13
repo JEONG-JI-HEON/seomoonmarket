@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+body{
+  color: #fff;
+}
+
 a{
   text-decoration: none;
   color: #fff;
@@ -19,4 +23,14 @@ a{
 
 strong{
   font-weight: bold;
+}
+
+.section{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  position: relative;
 }
