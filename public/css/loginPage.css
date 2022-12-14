@@ -1,0 +1,74 @@
+.login_con{
+  width: 550px;
+  height: 500px;
+  border: 1px solid #ddd;
+  padding: 0 30px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.login_form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+
+.login_form input{
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.login_inputWrap{
+  display: flex;
+  flex-direction: column;
+}
+
+.login_btn{
+  border: 0;
+  background-color: #C7B0C2;
+}
+
+.toJoin{
+  display: block;
+  width: 200px;
+  color: #000;
+}
+
+.toJoin>span{
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 반응형 630px */
+@media (max-width: 630px){
+  .login_con{
+    width: 100%;
+  }
+}
+/* 반응형 630px */
+
+/* 반응형 480px */
+@media (max-width: 630px){
+  .login_con{
+    height: 300px;
+  }
+  .login_form input{
+    font-size: 12px;
+  }
+  .toJoin{
+    width: auto;
+  }
+  .toJoin>span{
+    font-size: 14px;
+  }
+}
+/* 반응형 480px */

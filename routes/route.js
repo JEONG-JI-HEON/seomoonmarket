@@ -25,6 +25,21 @@ router.get('/noticeRead', (req, res) => {
   res.render('noticeRead');
 });
 
+/* 로그인페이지 */
+router.get('/login', (req, res) => {
+  res.render('loginPage');
+});
+
+/* 회원가입페이지 */
+router.get('/join', (req, res) => {
+  res.render('joinPage');
+});
+
+/* 야시장소개페이지 */
+router.get('/produce', (req, res) => {
+  res.render('producePage');
+});
+
 
 
 module.exports = router;

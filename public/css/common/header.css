@@ -174,11 +174,57 @@ h1.logo>a {
   z-index: -1;
 }
 
-/*** 1280px ***/
+/* 반응형 1280px */
 @media (max-width: 1280px) {
   .gnb_wrap {
     display: none;
   }
 }
 
-/*** 1280px ***/
+/* 반응형 1280px */
+
+
+/* 반응형 768px */
+@media (max-width: 768px) {
+  h1.logo {
+    width: 200px;
+    height: 70px;
+  }
+
+  h1.logo>a {
+    background-size: 200px auto;
+  }
+}
+/* 반응형 768px */
+
+/* 반응형 710px */
+@media (max-width: 710px) {
+  .header_wrap{
+    padding: 0 30px;
+  }
+}
+/* 반응형 710px */
+
+/* 반응형 480px */
+@media (max-width: 480px) {
+  .header_wrap{
+    padding: 0 15px;
+  }
+
+  .conv_menu>li{
+    display: none;
+  }
+}
+/* 반응형 480px */
+
+/* 반응형 333px */
+@media (max-width: 480px) {
+  h1.logo {
+    width: 150px;
+    height: 50px;
+  }
+  h1.logo>a {
+    background-size: 150px auto;
+  }
+}
+/* 반응형 333px */
