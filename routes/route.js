@@ -40,6 +40,19 @@ router.get('/produce', (req, res) => {
   res.render('producePage');
 });
 
+/* 현장스케치페이지 */
+router.get('/sketchMain', (req, res) => {
+  res.render('sketchMain');
+});
 
+/* 현장스케치작성페이지 */
+router.get('/sketchWrite', (req, res) => {
+  res.render('sketchWrite');
+});
+
+/* 현장스케치상세페이지 */
+router.get('/sketchRead', (req, res) => {
+  res.render('sketchRead');
+});
 
 module.exports = router;
