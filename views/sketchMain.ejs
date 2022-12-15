@@ -34,7 +34,7 @@
                 <option value="">작성자</option>
               </select>
               <input type="text">
-              <input type="submit">
+              <input type="submit" value="찾기">
             </fieldset>
           </div>
         </form>
@@ -42,26 +42,44 @@
           <table>
             <thead>
               <tr>
-                <th scope="col" class="num" style="width:10%">이미지</th>
+                <th scope="col" class="num" style="width:17%">이미지</th>
                 <th scope="col" class="title" style="width:35%">제목</th>
                 <th scope="col" style="width:14%">작성자</th>
                 <th scope="col" class="date" style="width:14%">작성일</th>
                 <th scope="col" class="view_cnt" style="width:10%">조회수</th>
-                <th scope="col" class="file" style="width:7%">파일</th>
-                <th scope="col" class="file" style="width:5%">수정</th>
-                <th scope="col" class="file" style="width:5%">삭제</th>
+                <th scope="col" style="width:5%">수정</th>
+                <th scope="col" style="width:5%">삭제</th>
               </tr>
             </thead>
             <tbody>
+              <% rows.forEach((row, index, array)=>{ %>
+              <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
               <tr>
-                <td>이미지</td>
-                <td><a href="/sketchRead">제목</a></td>
-                <td>작성자</td>
-                <td>작성일</td>
-                <td>0</td>
-                <td>파일</td>
-                
+                <td>
+                  <img src="<%= row.ske_img %>" alt="">
+                </td>
+                <td>
+                  <a href="/sketchRead?id=<%= row.id %>">
+                    <%= row.ske_tit %>
+                  </a>
+                </td>
+                <td>
+                  <%= row.write_user %>
+                </td>
+                <td>
+                  <%= toYear %>-<%= toMonth %>-<%= toDate %>
+                </td>
+                <td>
+                  <%= row.view_cnt %>
+                </td>
+                <td>
+                  <input type="button" value="수정" onclick="javascript:location.href='/sketchUpdate?id=<%= row.id %>'">
+                </td>
+                <td>
+                  <input type="button" value="삭제" onclick="javascript:location.href='/sketchDelete?id=<%= row.id %>'">
+                </td>
               </tr>
+              <% }); %>
             </tbody>
           </table>
         </div>

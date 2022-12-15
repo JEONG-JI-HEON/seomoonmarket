@@ -34,7 +34,7 @@
                 <option value="">작성자</option>
               </select>
               <input type="text">
-              <input type="submit">
+              <input type="submit" value="찾기">
             </fieldset>
           </div>
         </form>
@@ -53,15 +53,39 @@
               </tr>
             </thead>
             <tbody>
+              <% rows.forEach((row, index, array)=>{ %>
+              <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
               <tr>
-                <td>1</td>
-                <td><a href="/noticeRead">제목</a></td>
-                <td>작성자</td>
-                <td>작성일</td>
-                <td>0</td>
+                <td>
+                  <% if(row.noticeCheck == 'on'){ %>
+                  <div>공지</div>
+                  <% } else { %>
+                  <%= rows.length - index %>
+                  <% } %>
+                </td>
+                <td>
+                  <a href="/noticeRead?id=<%= row.id %>">
+                    <%= row.not_tit %>
+                  </a>
+                </td>
+                <td>
+                  <%= row.write_user %>
+                </td>
+                <td>
+                  <%= toYear %>-<%= toMonth %>-<%= toDate %>
+                </td>
+                <td>
+                  <%= row.view_cnt %>
+                </td>
                 <td>파일</td>
-                
+                <td>
+                  <input type="button" value="수정" onclick="javascript:location.href='/noticeUpdate?id=<%= row.id %>'">
+                </td>
+                <td>
+                  <input type="button" value="삭제" onclick="javascript:location.href='/noticeDelete?id=<%= row.id %>'">
+                </td>
               </tr>
+              <% }); %>
             </tbody>
           </table>
         </div>

@@ -103,6 +103,14 @@
   justify-content: space-between;
 }
 
+.mySwiper1 .swiper-slide a{
+  display: block;
+  color: #000;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .notice_content {
   width: 50%;
@@ -114,7 +122,7 @@
 
 .notice_date {}
 
-.noticeTitle {
+.noticeTitle>a{
   color: #000;
   font-size: 25px;
   font-family: 'PyeongChangPeace-Bold';
@@ -541,6 +549,60 @@
   background-image: url(../img/menu_icon6.png);
 }
 
+@keyframes fadeIn{
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 3;
+    transform: none;
+  }
+
+}
+
+@keyframes fadeOut{
+  from {
+    opacity: 3;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+}
+
+.fadeIn05{
+  animation: fadeIn 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.fadeIn06{
+  animation: fadeIn 0.6s ease-in-out;
+  opacity: 1;
+}
+
+.fadeIn07{
+  animation: fadeIn 0.7s ease-in-out;
+  opacity: 1;
+}
+
+.fadeOut05{
+  animation: fadeOut 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.fadeOut06{
+  animation: fadeOut 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.fadeOut07{
+  animation: fadeOut 0.7s ease-in-out;
+  opacity: 0;
+}
+
 /* 반응형 1280px */
 @media (max-width: 1280px) {
   .slide_info>ul {
@@ -700,7 +762,7 @@
 
 /* 반응형 899px */
 @media (max-width: 899px) {
-  .noticeTitle {
+  .noticeTitle>a {
     margin-left: 0;
   }
 
@@ -815,7 +877,7 @@
   }
 
   .slide_info>ul>li{
-    width: 70%;
+    width: 100%;
   }
 
   .slide_info>ul>li>a {
@@ -849,7 +911,7 @@
     padding: 0 15px;
   }
 
-  .noticeTitle {
+  .noticeTitle>a{
     font-size: 18px;
   }
 

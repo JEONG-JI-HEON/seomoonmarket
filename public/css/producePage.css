@@ -30,3 +30,78 @@
 .produce1{
   margin-bottom: 50px;
 }
+
+.produce2{
+  margin-bottom: 150px;
+}
+
+.produce3 p{
+  text-align: center;
+  font-size: 18px;
+}
+
+.produce3 a{
+  color: #000;
+}
+
+.produce_imgcon{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.produce_imgcon>li{
+  width: calc(50% - 10px);
+  /* height: 500px; */
+  margin-top: 50px;
+  padding: 30px 0;
+  box-sizing: border-box;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.produce_imgcon>li>a{
+  display: block;
+  width: 100%;
+  padding-top: 70%;
+}
+
+
+.p_img1{
+  background-image: url(../img/produce1.jpg);
+}
+
+.p_img2{
+  background-image: url(../img/produce2.jpg);
+}
+
+.p_img3{
+  background-image: url(../img/produce3.jpg);
+}
+
+.p_img4{
+  background-image: url(../img/produce4.jpg);
+}
+
+.p_img5{
+  background-image: url(../img/produce5.jpg);
+}
+
+.p_img6{
+  background-image: url(../img/produce6.jpg);
+}
+
+/* 반응형 680px */
+@media(max-width: 680px){
+  .produce_imgcon{
+    gap: 0;
+  }
+
+  .produce_imgcon>li{
+    width: 100%;
+  }
+}
+/* 반응형 680px */

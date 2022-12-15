@@ -26,16 +26,32 @@
       </div>
       <div class="notice_viewWrap">
         <div class="view_title">
-          <h4>제목</h4>
+          <h4><%= row.ske_tit %></h4>
         </div>
         <ul class="view_info">
-          <li class="writer"><span>작성자</span></li>
-          <li class="date"><span>작성시간</span></li>
-          <li class="view_ctn"><span>조회수</span></li>
-          <li class="file"><span>파일이름</span></li>
+          <li class="writer">
+            <span>작성자</span>
+            <%= row.write_user %>
+          </li>
+          <li class="date">
+            <span>작성시간</span>
+            <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
+            <%= toYear %>-<%= toMonth %>-<%= toDate %>
+          </li>
+          <li class="view_ctn">
+            <span>조회수</span>
+            <%= row.view_cnt %>
+          </li>
+          <li class="file">
+            <span>파일이름</span>
+            <%= row.ske_img %>
+          </li>
         </ul>
         <div class="view_con">
-          <p>내용</p>
+          <img src="<%= row.ske_img %>" alt="">
+          <p>
+            <%= row.ske_content %>
+          </p>
         </div>
         <div class="board_btnWrap">
           <a href="/sketchMain" class="list_btn">목록</a>

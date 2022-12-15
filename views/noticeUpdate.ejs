@@ -1,4 +1,4 @@
-<title>서문시장 현장스케치</title>
+<title>서문시장 공지사항</title>
 <div class="sub_visual">
   <div class="main_slider">
     <div class="subVisual_layout">
@@ -12,7 +12,7 @@
             <span class="home_icon"></span>
           </a>
           <a href="/noticeMain">커뮤니티</a>
-          <a href="/sketchMain">현장스케치</a>
+          <a href="/noticeMain">공지사항</a>
         </div>
       </div>
     </div>
@@ -22,24 +22,26 @@
   <div class="section_inner">
     <div class="section_con">
       <div class="section_title">
-        <h2>현장스케치</h2>
+        <h2>공지사항</h2>
       </div>
       <div class="notice_writeWrap">
-        <form id="noticeWrite" method="post" action="/sketchWriteInfo" enctype="multipart/form-data">
+        <form id="noticeWrite" method="post" action="/noticeUpdateInfo">
+          <input type="hidden" name="id" value="<%= row.id %>">
           <div class="boardInfo">
-            <input type="file" name="ske_img">
+            <input type="checkbox" name="noticeCheck" id="noticeCheck">
+            <label class="writeNotice" for="noticeCheck">공지로 작성</label>
             <input type="text" name="write_user" placeholder="ID">
             <input type="password" name="user_pw" placeholder="PW">
           </div>
           <div class="boardTitle">
-            <input type="text" name="ske_tit" id="board_tit" placeholder="제목">
+            <input type="text" name="not_tit" id="board_tit" placeholder="제목"  value="<%= row.not_tit %>">
           </div>
           <div class="boardCon">
-            <textarea name="ske_content" id="" cols="30" rows="20" placeholder="내용"></textarea>
+            <textarea name="not_content" id="" cols="30" rows="20" placeholder="내용"><%= row.not_content %></textarea>
           </div>
           <div class="boardBtn">
             <input type="submit" value="등록">
-            <input type="button" value="취소" onclick="javascript:location.href='/sketchMain'">
+            <input type="button" value="취소" onclick="javascript:location.href='/noticeMain'">
           </div>
         </form>
       </div>

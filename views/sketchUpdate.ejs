@@ -25,17 +25,18 @@
         <h2>현장스케치</h2>
       </div>
       <div class="notice_writeWrap">
-        <form id="noticeWrite" method="post" action="/sketchWriteInfo" enctype="multipart/form-data">
+        <form id="noticeWrite" method="post" action="/sketchUpdateInfo" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<%= row.id %>">
           <div class="boardInfo">
-            <input type="file" name="ske_img">
-            <input type="text" name="write_user" placeholder="ID">
+            <input type="file" name="ske_img" value="<%= row.ske_img %>">
+            <input type="text" name="write_user" placeholder="ID" value="<%= row.write_user %>">
             <input type="password" name="user_pw" placeholder="PW">
           </div>
           <div class="boardTitle">
-            <input type="text" name="ske_tit" id="board_tit" placeholder="제목">
+            <input type="text" name="ske_tit" id="board_tit" placeholder="제목" value="<%= row.ske_tit %>">
           </div>
           <div class="boardCon">
-            <textarea name="ske_content" id="" cols="30" rows="20" placeholder="내용"></textarea>
+            <textarea name="ske_content" id="" cols="30" rows="20" placeholder="내용"><%= row.ske_content %></textarea>
           </div>
           <div class="boardBtn">
             <input type="submit" value="등록">

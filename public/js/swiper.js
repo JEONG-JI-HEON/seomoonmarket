@@ -2,6 +2,7 @@ var swiper = new Swiper(".mySwiper1", {
   direction: "vertical",
   slidesPerGroup: 1,
   loop: true,
+  loopAdditionalSlides: 1,
   autoplay: true,
   allowTouchMove: false,
 
