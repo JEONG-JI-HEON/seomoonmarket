@@ -7,9 +7,11 @@ const db = require('./../db.js');
 
 /* 메인페이지 */
 router.get('/', (req, res) => {
-  db.getMainPage((rows) => {
+  db.getMainPage((rowNotice, rowSketchASC, rowSketchDESC) => {
     res.render('mainPage', {
-      rows: rows
+      rowNotice: rowNotice,
+      rowSketchASC: rowSketchASC,
+      rowSketchDESC: rowSketchDESC
     });
   });
 });

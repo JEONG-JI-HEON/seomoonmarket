@@ -21,7 +21,7 @@
         <a href="/noticeMain">공지사항</a>
       </strong>
       <div class="swiper-wrapper slide_wrap">
-        <% rows.forEach((row, index, array)=>{ %>
+        <% rowNotice.forEach((row, index, array)=>{ %>
         <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
         <div class="swiper-slide">
           <span class="notice_content">
@@ -143,24 +143,16 @@
       <div class="img_slide fadeOut07">
         <div class="swiper mySwiper3">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery01.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery02.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery03.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery04.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery05.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery06.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery07.jpg" alt=""></a></div>
+            <% rowSketchASC.forEach((row, index, array)=>{ %>
+            <div class="swiper-slide"><a href="/sketchRead?id=<%= row.id %>"><img src="<%= row.ske_img %>" alt=""></a></div>
+            <% }); %>
           </div>
         </div>
         <div class="swiper mySwiper4">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery08.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery09.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery10.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery11.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery12.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery13.jpg" alt=""></a></div>
-            <div class="swiper-slide"><a href="/sketchMain"><img src="img/gallery14.jpg" alt=""></a></div>
+            <% rowSketchDESC.forEach((row, index, array)=>{ %>
+            <div class="swiper-slide"><a href="/sketchRead?id=<%= row.id %>"><img src="<%= row.ske_img %>" alt=""></a></div>
+            <% }); %>
           </div>
         </div>
       </div>

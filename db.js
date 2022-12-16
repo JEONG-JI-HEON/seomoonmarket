@@ -3,7 +3,8 @@ var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '1234',
-  database: 'seomoonmarket'
+  database: 'seomoonmarket',
+  multipleStatements: true
 });
 
 connection.connect(function (err) {
@@ -11,11 +12,14 @@ connection.connect(function (err) {
   console.log("Connected!");
 });
 
-// 메인페이지에 게시판 테이블 내용을 출력할때
+// 메인페이지에 게시판 테이블 내용과 현장스케치 내용을 출력할때
 function getMainPage(callback) {
-  connection.query('SELECT * FROM marketnotice ORDER BY id DESC LIMIT 3', (err, rows, fields) => {
+  connection.query('SELECT * FROM marketnotice ORDER BY id DESC LIMIT 3;' + 'SELECT * FROM marketsketch ORDER BY id ASC LIMIT 7;' + 'SELECT * FROM marketsketch ORDER BY id DESC LIMIT 7;', (err, rows, fields) => {
     if (err) throw err;
-    callback(rows);
+    let rowNotice = rows[0];
+    let rowSketchASC = rows[1];
+    let rowSketchDESC = rows[2];
+    callback(rowNotice, rowSketchASC, rowSketchDESC);
   });
 };
 
