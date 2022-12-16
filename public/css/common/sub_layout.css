@@ -114,3 +114,9 @@
   font-size: 42px;
   font-weight: bold;
 }
+
+@media (max-width: 768px){
+  .section_con{
+    padding: 30px 15px 50px; 
+  }
+}

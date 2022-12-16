@@ -87,3 +87,35 @@
   text-align: center;
   line-height: 18px;
 }
+
+input[value="수정"], input[value="삭제"]{
+  background-color: #0a0e11;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 반응형 999px */
+@media(max-width: 999px){
+  .board_list table th, .board_list table td {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  input[value="수정"], input[value="삭제"]{
+    font-size: 12px;
+    padding: 0;
+  }
+}
+/* 반응형 999px */
+
+/* 반응형 650px */
+@media(max-width: 650px){
+  .board_list table th, .board_list table td {
+    font-size: 8px;
+  }
+
+  input[value="수정"], input[value="삭제"]{
+    font-size: 8px;
+  }
+}
+/* 반응형 650px */
