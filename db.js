@@ -102,6 +102,23 @@ function deleteSketchByid(id, callback){
   });
 };
 
+// userinfo를 수정할때 (생성할때)
+function insertUserInfo(user_name, user_id, user_pw, user_birth, user_phoneNum, callback){
+  connection.query(`INSERT INTO marketuserinfo(create_time, user_name, user_id, user_pw, user_birth, user_phoneNum) VALUES(NOW(), '${user_name}', '${user_id}', '${user_pw}', '${user_birth}', '${user_phoneNum}')`, (err)=>{
+    if(err) throw err;
+    callback();
+  });
+};
+
+// 로그인정보와 테이블 정보를 비교하는 함수
+function loginCheck(login_id, login_pw, callback){
+  connection.query(`SELECT * FROM marketuserinfo WHERE user_id='${login_id}' and user_pw='${login_pw}'`, (err, results)=>{
+    if(err) throw err;
+    callback(results);
+  })
+}
+
+
 module.exports = {
-  getMainPage,getNotice,insertNotice,updateNotice,getNoticeByid,deleteNoticeByid,getSketch,insertSketch,updateSketch,getSketchByid,deleteSketchByid
+  getMainPage,getNotice,insertNotice,updateNotice,getNoticeByid,deleteNoticeByid,getSketch,insertSketch,updateSketch,getSketchByid,deleteSketchByid,insertUserInfo,loginCheck
 };

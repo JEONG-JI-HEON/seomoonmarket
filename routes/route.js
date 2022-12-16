@@ -82,15 +82,49 @@ router.get('/noticeRead', (req, res) => {
   });
 });
 
+
+
 /* 로그인페이지 */
 router.get('/login', (req, res) => {
   res.render('loginPage');
 });
 
+/* 로그인 내용 */
+router.post('/logininfo', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let login_id = param['login_id'];
+  let login_pw = param['login_pw'];
+  db.loginCheck(login_id, login_pw, (results)=>{
+    if (results.length > 0){
+      res.send(`<script>alert("${login_id}님, 어서오세요."); document.location.href="/";</script>`)
+    } else {
+      res.send(`<script>alert("로그인 정보가 일치하지 않습니다."); document.location.href="/login";</script>`)
+    }
+  });
+})
+
 /* 회원가입페이지 */
 router.get('/join', (req, res) => {
   res.render('joinPage');
 });
+
+/* 회원가입 내용을 테이블에 넣기 */
+router.post('/joininfo', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let user_name = param['user_name'];
+  let user_id = param['user_id'];
+  let user_pw = param['user_pw'];
+  let user_birth = param['user_birth'];
+  let user_phoneNum = param['user_phoneNum'];
+  db.insertUserInfo(user_name, user_id, user_pw, user_birth, user_phoneNum, ()=>{
+    res.redirect('/login');
+  });
+})
+
+
+
+
+
 
 /* 야시장소개페이지 */
 router.get('/produce', (req, res) => {
