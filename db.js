@@ -4,6 +4,7 @@ var connection = mysql.createConnection({
   user: 'root',
   password: 'wjdgjs0397',
   database: 'seomoonmarket',
+  dateStrings: 'date',
   multipleStatements: true
 });
 
