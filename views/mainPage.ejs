@@ -22,7 +22,6 @@
       </strong>
       <div class="swiper-wrapper slide_wrap">
         <% rowNotice.forEach((row, index, array)=>{ %>
-        <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
         <div class="swiper-slide">
           <span class="notice_content">
             <a href="/noticeRead?id=<%= row.id %>">
@@ -33,7 +32,7 @@
             </a>
           </span>
           <span class="notice_date">
-            <%= toYear %>.<%= toMonth %>.<%= toDate %>
+            <%= row.create_time %>
           </span>
         </div>
         <% }); %>

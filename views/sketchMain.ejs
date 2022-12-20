@@ -52,8 +52,6 @@
               </tr>
             </thead>
             <tbody>
-              <% rows.forEach((row, index, array)=>{ %>
-              <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
               <tr>
                 <td>
                   <img src="<%= row.ske_img %>" alt="">
@@ -67,7 +65,7 @@
                   <%= row.write_user %>
                 </td>
                 <td>
-                  <%= toYear %>-<%= toMonth %>-<%= toDate %>
+                  <%= row.create_time %>
                 </td>
                 <td>
                   <%= row.view_cnt %>
