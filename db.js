@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'database-1.cdgtgmckehex.ap-northeast-1.rds.amazonaws.com',
   user: 'root',
-  password: '6f62e9ee',
+  password: 'wjdgjs0397',
   database: 'seomoonmarket',
   multipleStatements: true
 });
