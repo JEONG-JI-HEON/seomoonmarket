@@ -1,8 +1,10 @@
 var swiper = new Swiper(".mySwiper1", {
   direction: "vertical",
-  slidesPerGroup: 1,
+  slidesPerView: 1,
   loop: true,
   loopAdditionalSlides: 1,
+  initialSlide: 0,
+
   autoplay: true,
   allowTouchMove: false,
 

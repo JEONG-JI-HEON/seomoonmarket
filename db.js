@@ -4,7 +4,6 @@ var connection = mysql.createConnection({
   user: 'root',
   password: 'wjdgjs0397',
   database: 'seomoonmarket',
-  dateStrings: 'date',
   multipleStatements: true
 });
 
@@ -109,7 +108,8 @@ function deleteSketchByid(id, callback){
 
 // userinfo를 수정할때 (생성할때)
 function insertUserInfo(user_name, user_id, user_pw, user_birth, user_phoneNum, callback){
-  connection.query(`INSERT INTO marketuserinfo(create_time, user_name, user_id, user_pw, user_birth, user_phoneNum) VALUES(NOW(), '${user_name}', '${user_id}', '${user_pw}', '${user_birth}', '${user_phoneNum}')`, (err)=>{
+  connection.query(`INSERT INTO marketuserinfo(create_time, user_name, user_id, user_pw, user_birth, user_phoneNum) VALUES(NOW(), '${user_name}', '${user_id}', '${user_pw}', '${user_birth}', '${user_phoneNum}')`, (err, row)=>{
+    console.log(row);
     if(err) throw err;
     callback();
   });
@@ -122,6 +122,7 @@ function loginCheck(login_id, login_pw, callback){
     callback(results);
   })
 }
+
 
 
 module.exports = {

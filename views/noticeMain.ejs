@@ -54,6 +54,7 @@
             </thead>
             <tbody>
               <% rows.forEach((row, index, array)=>{ %>
+              <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
               <tr>
                 <td>
                   <% if(row.noticeCheck == 'on'){ %>
@@ -71,7 +72,7 @@
                   <%= row.write_user %>
                 </td>
                 <td>
-                  <%= row.create_time %>
+                  <%= toYear %>-<%= toMonth %>-<%= toDate %>
                 </td>
                 <td>
                   <%= row.view_cnt %>

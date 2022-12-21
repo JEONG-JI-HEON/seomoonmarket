@@ -22,6 +22,7 @@
       </strong>
       <div class="swiper-wrapper slide_wrap">
         <% rowNotice.forEach((row, index, array)=>{ %>
+        <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
         <div class="swiper-slide">
           <span class="notice_content">
             <a href="/noticeRead?id=<%= row.id %>">
@@ -32,7 +33,7 @@
             </a>
           </span>
           <span class="notice_date">
-            <%= row.create_time %>
+            <%= toYear %>-<%= toMonth %>-<%= toDate %>
           </span>
         </div>
         <% }); %>
@@ -143,14 +144,16 @@
         <div class="swiper mySwiper3">
           <div class="swiper-wrapper">
             <% rowSketchASC.forEach((row, index, array)=>{ %>
-            <div class="swiper-slide"><a href="/sketchRead?id=<%= row.id %>"><img src="<%= row.ske_img %>" alt=""></a></div>
+            <div class="swiper-slide"><a href="/sketchRead?id=<%= row.id %>"><img src="<%= row.ske_img %>" alt=""></a>
+            </div>
             <% }); %>
           </div>
         </div>
         <div class="swiper mySwiper4">
           <div class="swiper-wrapper">
             <% rowSketchDESC.forEach((row, index, array)=>{ %>
-            <div class="swiper-slide"><a href="/sketchRead?id=<%= row.id %>"><img src="<%= row.ske_img %>" alt=""></a></div>
+            <div class="swiper-slide"><a href="/sketchRead?id=<%= row.id %>"><img src="<%= row.ske_img %>" alt=""></a>
+            </div>
             <% }); %>
           </div>
         </div>
