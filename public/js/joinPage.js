@@ -13,10 +13,11 @@ function checkAll() {
   else if (!checkId(joinform.user_id.value)) {
     return false;
   }
-  // else if (idCheck.value == '0'){
-  //   alert('아이디 중복확인을 해주세요.')
-  //   return false;
-  // }
+  // id 중복 체크 여부
+  else if (idCheck.value == '0') {
+    alert('아이디 중복확인을 해주세요.')
+    return false;
+  }
 
   // pw 체크 함수 호출
   else if (!checkPw(joinform.user_id.value, joinform.user_pw.value, joinform.user_pwCheck.value)) {
@@ -92,6 +93,26 @@ function checkId(id) {
     joinform.user_id.focus();
     return false;
   }
+  return true;
+}
+
+// id 중복체크
+function confirmId() {
+  let inputId = joinform.user_id.value;
+  for (i = 0; i < arguments.length; i++) {
+    if (!inputId){
+      idCheck.value = '0';
+      alert('아이디를 입력하세요.');
+      return false;
+    }
+    if (arguments[i] == inputId) {
+      idCheck.value = '0';
+      alert('중복된 아이디 입니다.');
+      return false;
+    }
+  }
+  idCheck.value = '1';
+  alert('사용 가능한 아이디 입니다.');
   return true;
 }
 
