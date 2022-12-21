@@ -98,7 +98,6 @@ function checkId(id) {
 
 // id 중복체크
 function confirmId() {
-  console.log(arguments);
   let inputId = joinform.user_id.value;
   for (i = 0; i < arguments.length; i++) {
     if (!inputId){
