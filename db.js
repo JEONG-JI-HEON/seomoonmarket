@@ -1,3 +1,6 @@
+const {
+  query
+} = require('express');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'database-1.cdgtgmckehex.ap-northeast-1.rds.amazonaws.com',
@@ -33,33 +36,33 @@ function getNotice(callback) {
 
 // 게시판을 생성할때 (테이블에 내용을 넣기위함)
 function insertNotice(write_user, not_tit, not_content, noticeCheck, callback) {
-  connection.query(`INSERT INTO marketnotice(create_time, write_user, not_tit, not_content, noticeCheck) VALUES(NOW(), '${write_user}', '${not_tit}', '${not_content}', '${noticeCheck}')`,(err)=>{
-    if(err) throw err;
+  connection.query(`INSERT INTO marketnotice(create_time, write_user, not_tit, not_content, noticeCheck) VALUES(NOW(), '${write_user}', '${not_tit}', '${not_content}', '${noticeCheck}')`, (err) => {
+    if (err) throw err;
     callback();
   });
 };
 
 
 // 게시판의 수정할때 (테이블에 수정된내용을 넣기위함)
-function updateNotice(id, write_user, not_tit, not_content, callback){
-  connection.query(`UPDATE marketnotice SET create_time=NOW(), write_user='${write_user}', not_tit='${not_tit}', not_content='${not_content}' WHERE id='${id}'`, (err)=>{
-    if(err) throw err;
+function updateNotice(id, write_user, not_tit, not_content, callback) {
+  connection.query(`UPDATE marketnotice SET create_time=NOW(), write_user='${write_user}', not_tit='${not_tit}', not_content='${not_content}' WHERE id='${id}'`, (err) => {
+    if (err) throw err;
     callback();
   });
 };
 
 // 게시판 중 id가 일치하는 데이터만 추출 (불러올때, 수정할때 필요)
-function getNoticeByid(id, callback){
-  connection.query(`SELECT * FROM marketnotice WHERE id=${id}`, (err, row)=>{
-    if(err) throw err;
+function getNoticeByid(id, callback) {
+  connection.query(`SELECT * FROM marketnotice WHERE id=${id}`, (err, row) => {
+    if (err) throw err;
     callback(row);
   });
 };
 
 // 게시판 중 id가 일치하는 데이터만 추출 (삭제할때 필요)
-function deleteNoticeByid(id, callback){
-  connection.query(`DELETE FROM marketnotice WHERE id=${id}`,(err)=>{
-    if(err) throw err;
+function deleteNoticeByid(id, callback) {
+  connection.query(`DELETE FROM marketnotice WHERE id=${id}`, (err) => {
+    if (err) throw err;
     callback();
   });
 };
@@ -76,55 +79,77 @@ function getSketch(callback) {
 
 // 현장스케치을 생성할때 (테이블에 내용을 넣기위함)
 function insertSketch(write_user, ske_tit, ske_content, ske_img, callback) {
-  connection.query(`INSERT INTO marketsketch(create_time, write_user, ske_tit, ske_content, ske_img) VALUES(NOW(), '${write_user}', '${ske_tit}', '${ske_content}', '${ske_img}')`,(err)=>{
-    if(err) throw err;
+  connection.query(`INSERT INTO marketsketch(create_time, write_user, ske_tit, ske_content, ske_img) VALUES(NOW(), '${write_user}', '${ske_tit}', '${ske_content}', '${ske_img}')`, (err) => {
+    if (err) throw err;
     callback();
   });
 };
 
 // 현장스케치 수정할때 (테이블에 수정된내용을 넣기위함)
-function updateSketch(id, write_user, ske_tit, ske_content, ske_img, callback){
-  connection.query(`UPDATE marketsketch SET create_time=NOW(), write_user='${write_user}', ske_tit='${ske_tit}', ske_content='${ske_content}', ske_img='${ske_img}' WHERE id='${id}'`, (err)=>{
-    if(err) throw err;
+function updateSketch(id, write_user, ske_tit, ske_content, ske_img, callback) {
+  connection.query(`UPDATE marketsketch SET create_time=NOW(), write_user='${write_user}', ske_tit='${ske_tit}', ske_content='${ske_content}', ske_img='${ske_img}' WHERE id='${id}'`, (err) => {
+    if (err) throw err;
     callback();
   });
 };
 
 // 현장스케치 중 id가 일치하는 데이터만 추출 (불러올때, 수정할때 필요)
-function getSketchByid(id, callback){
-  connection.query(`SELECT * FROM marketsketch WHERE id=${id}`, (err, row)=>{
-    if(err) throw err;
+function getSketchByid(id, callback) {
+  connection.query(`SELECT * FROM marketsketch WHERE id=${id}`, (err, row) => {
+    if (err) throw err;
     callback(row);
   });
 };
 
 // 현장스케치 중 id가 일치하는 데이터만 추출 (삭제할때 필요)
-function deleteSketchByid(id, callback){
-  connection.query(`DELETE FROM marketsketch WHERE id=${id}`,(err)=>{
-    if(err) throw err;
+function deleteSketchByid(id, callback) {
+  connection.query(`DELETE FROM marketsketch WHERE id=${id}`, (err) => {
+    if (err) throw err;
     callback();
   });
 };
 
 // userinfo를 수정할때 (생성할때)
-function insertUserInfo(user_name, user_id, user_pw, user_birth, user_phoneNum, callback){
-  connection.query(`INSERT INTO marketuserinfo(create_time, user_name, user_id, user_pw, user_birth, user_phoneNum) VALUES(NOW(), '${user_name}', '${user_id}', '${user_pw}', '${user_birth}', '${user_phoneNum}')`, (err, row)=>{
-    console.log(row);
-    if(err) throw err;
+function insertUserInfo(user_name, user_id, user_pw, user_birth, user_phoneNum, callback) {
+  connection.query(`INSERT INTO marketuserinfo(create_time, user_name, user_id, user_pw, user_birth, user_phoneNum) VALUES(NOW(), '${user_name}', '${user_id}', '${user_pw}', '${user_birth}', '${user_phoneNum}');`, (err, results, fields) => {
+    if (err.errno == '1062') {
+      throw new Error('중복된 아이디');
+    }
     callback();
   });
 };
 
 // 로그인정보와 테이블 정보를 비교하는 함수
-function loginCheck(login_id, login_pw, callback){
-  connection.query(`SELECT * FROM marketuserinfo WHERE user_id='${login_id}' and user_pw='${login_pw}'`, (err, results)=>{
-    if(err) throw err;
+function loginCheck(login_id, login_pw, callback) {
+  connection.query(`SELECT * FROM marketuserinfo WHERE user_id='${login_id}' and user_pw='${login_pw}'`, (err, results) => {
+    if (err) throw err;
     callback(results);
   })
 }
 
+// 로그인 페이지에서 테이블 정보를 가져오는 함수
+function useridData(callback) {
+  connection.query('SELECT * FROM marketuserinfo ORDER BY user_id DESC', (err, rows, fields) => {
+    if (err) throw err;
+    callback(rows);
+  });
+};
+
 
 
 module.exports = {
-  getMainPage,getNotice,insertNotice,updateNotice,getNoticeByid,deleteNoticeByid,getSketch,insertSketch,updateSketch,getSketchByid,deleteSketchByid,insertUserInfo,loginCheck
+  getMainPage,
+  getNotice,
+  insertNotice,
+  updateNotice,
+  getNoticeByid,
+  deleteNoticeByid,
+  getSketch,
+  insertSketch,
+  updateSketch,
+  getSketchByid,
+  deleteSketchByid,
+  insertUserInfo,
+  loginCheck,
+  useridData
 };
