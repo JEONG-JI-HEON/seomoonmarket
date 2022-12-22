@@ -101,3 +101,13 @@
     box-sizing: border-box;
   }
 }
+
+@media (max-width: 450px) {
+  .input_wrap>input[type=button]{
+    position: static;
+    border: 1px solid;
+  }
+  .input_wrap8{
+    margin-bottom: 16px;
+  }
+}
