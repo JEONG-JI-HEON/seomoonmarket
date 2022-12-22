@@ -57,7 +57,7 @@ function fadeEffectP(){
     firsttext.classList.remove('fadeOut07');
   };
   
-  if(nowHeight >= 15 && nowHeight < 43){
+  if(nowHeight >= 15 && nowHeight < 46){
     secondmoon.classList.add('fadeIn05');
     secondmoon.classList.remove('fadeOut05');
     secondtitle.classList.add('fadeIn06');
@@ -94,7 +94,7 @@ function fadeEffectP(){
     thirdCon.classList.add('fadeOut07');
   };
   
-  if(nowHeight >= 77 && nowHeight < 99){
+  if(nowHeight >= 71 && nowHeight < 99){
     forthText1.classList.add('fadeIn05');
     forthText1.classList.remove('fadeOut05');
     forthText2.classList.add('fadeIn06');
