@@ -77,9 +77,11 @@ router.get('/noticeDelete', (req, res) => {
 /* 공지사항상세페이지 */
 router.get('/noticeRead', (req, res) => {
   let id = req.query.id;
-  db.getNoticeByid(id, (row) => {
+  db.getNoticeByid(id, (row, getNoticeByid, viewCntPlus) => {
     res.render('noticeRead', {
-      row: row[0]
+      row: row[0],
+      getNoticeByid: getNoticeByid,
+      viewCntPlus: viewCntPlus
     })
   });
 });
@@ -225,9 +227,11 @@ router.get('/sketchDelete', (req, res) => {
 /* 현장스케치상세페이지 */
 router.get('/sketchRead', (req, res) => {
   let id = req.query.id;
-  db.getSketchByid(id, (row) => {
+  db.getSketchByid(id, (row, getSketchByid, viewCntPlus) => {
     res.render('sketchRead', {
-      row: row[0]
+      row: row[0],
+      getSketchByid: getSketchByid,
+      viewCntPlus: viewCntPlus
     })
   });
 });

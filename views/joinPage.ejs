@@ -33,7 +33,8 @@
             <% rows.forEach((row, index)=>{ %>
             <% ides.push(row.user_id); %>
             <% }); %>
-            <input type="button" for="inputid" value="아이디 중복 확인" onclick="confirmId(<% for(i = 0; i < ides.length; i++){ %> '<%= ides[i] %>',<% } %>)">
+            <input type="button" for="inputid" value="아이디 중복 확인"
+              onclick="confirmId(<% for(i = 0; i < ides.length; i++){ %> '<%= ides[i] %>',<% } %>)">
             <input type="hidden" name="idCheck" id="idCheck" value="0">
           </div>
           <div class="input_wrap input_wrap4">

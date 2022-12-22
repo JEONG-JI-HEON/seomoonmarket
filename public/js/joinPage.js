@@ -9,8 +9,11 @@ function checkAll() {
   else if (!checkbirth(joinform.user_birth.value)) {
     return false;
   }
+
+  
   // id 체크 함수 호출
   else if (!checkId(joinform.user_id.value)) {
+    idCheck.value = '0';
     return false;
   }
   // id 중복 체크 여부

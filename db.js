@@ -53,9 +53,11 @@ function updateNotice(id, write_user, not_tit, not_content, callback) {
 
 // 게시판 중 id가 일치하는 데이터만 추출 (불러올때, 수정할때 필요)
 function getNoticeByid(id, callback) {
-  connection.query(`SELECT * FROM marketnotice WHERE id=${id}`, (err, row) => {
+  connection.query(`SELECT * FROM marketnotice WHERE id=${id};` + `UPDATE marketnotice SET view_cnt = view_cnt + 1 WHERE id = ${id};`, (err, rows) => {
     if (err) throw err;
-    callback(row);
+    let getNoticeByid = rows[0];
+    let viewCntPlus = rows[1];
+    callback(getNoticeByid, viewCntPlus);
   });
 };
 
@@ -95,9 +97,11 @@ function updateSketch(id, write_user, ske_tit, ske_content, ske_img, callback) {
 
 // 현장스케치 중 id가 일치하는 데이터만 추출 (불러올때, 수정할때 필요)
 function getSketchByid(id, callback) {
-  connection.query(`SELECT * FROM marketsketch WHERE id=${id}`, (err, row) => {
+  connection.query(`SELECT * FROM marketsketch WHERE id=${id};` + `UPDATE marketsketch SET view_cnt = view_cnt + 1 WHERE id = ${id};`, (err, rows) => {
     if (err) throw err;
-    callback(row);
+    let getSketchByid = rows[0];
+    let viewCntPlus = rows[1];
+    callback(getSketchByid, viewCntPlus)
   });
 };
 
