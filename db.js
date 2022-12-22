@@ -112,9 +112,7 @@ function deleteSketchByid(id, callback) {
 // userinfo를 수정할때 (생성할때)
 function insertUserInfo(user_name, user_id, user_pw, user_birth, user_phoneNum, callback) {
   connection.query(`INSERT INTO marketuserinfo(create_time, user_name, user_id, user_pw, user_birth, user_phoneNum) VALUES(NOW(), '${user_name}', '${user_id}', '${user_pw}', '${user_birth}', '${user_phoneNum}');`, (err, results, fields) => {
-    if (err.errno == '1062') {
-      throw new Error('중복된 아이디');
-    }
+    if (err) throw err;
     callback();
   });
 };
