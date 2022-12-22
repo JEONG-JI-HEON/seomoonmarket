@@ -92,6 +92,17 @@
 }
 
 .footer_info{
-
   color: #4c5861;
+}
+
+@media (max-width: 715px){
+  #footer{
+    height: 100%;
+  }
+  .logo_wrap>li{
+    margin-right: 0;
+  }
+  .footer_inner{
+    gap: 30px;
+  }
 }

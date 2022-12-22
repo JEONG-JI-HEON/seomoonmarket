@@ -1,0 +1,10 @@
+.view_con img{
+  display: block;
+  width: 100%;
+}
+
+.view_info>li{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
