@@ -55,7 +55,7 @@
             <tbody>
               <% rows.forEach((row, index, array)=>{ %>
               <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
-              <tr>
+              <tr> 
                 <td>
                   <% if(row.noticeCheck == 'on'){ %>
                   <div>공지</div>
@@ -72,7 +72,7 @@
                   <%= row.write_user %>
                 </td>
                 <td>
-                  <%= toYear %>-<%= toMonth %>-<%= toDate %>
+                  <%= toYear %>-<%= String(toMonth).padStart(2, '0') %>-<%= String(toDate).padStart(2, '0') %>
                 </td>
                 <td>
                   <%= row.view_cnt %>

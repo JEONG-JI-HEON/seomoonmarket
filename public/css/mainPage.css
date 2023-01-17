@@ -36,7 +36,6 @@
   width: 116px;
   height: 116px;
   margin: 0 auto;
-
 }
 
 .mv_title {
@@ -56,25 +55,25 @@
   right: calc(50% - 350px);
 }
 
-.right_txt>strong {
-  font-family: 'PyeongChang';
+.right_txt > strong {
+  font-family: "PyeongChang";
   font-size: 24px;
 }
 
-.right_txt>p {
-  font-family: 'PyeongChang';
+.right_txt > p {
+  font-family: "PyeongChang";
   margin: 20px 0 80px;
 }
 
-.openTime>p {
+.openTime > p {
   font-size: 18px;
-  font-family: 'PyeongChang';
+  font-family: "PyeongChang";
 }
 
 .notice_slide {
   width: 100%;
   height: 60px;
-  background-color: #C7B0C2;
+  background-color: #c7b0c2;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -106,7 +105,7 @@
   justify-content: space-between;
 }
 
-.mySwiper1 .swiper-slide a{
+.mySwiper1 .swiper-slide a {
   display: block;
   color: #000;
   font-weight: 500;
@@ -123,17 +122,18 @@
   text-align: center;
 }
 
-.notice_date {}
+.notice_date {
+}
 
-.noticeTitle>a{
+.noticeTitle > a {
   color: #000;
   font-size: 25px;
-  font-family: 'PyeongChangPeace-Bold';
+  font-family: "PyeongChangPeace-Bold";
   line-height: 60px;
   margin-left: 15%;
 }
 
-.notice_slide>.swiper-pagination {
+.notice_slide > .swiper-pagination {
   width: 33px;
   display: flex;
   justify-content: space-between;
@@ -141,7 +141,6 @@
   right: 20%;
   --swiper-theme-color: #000;
 }
-
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -166,7 +165,7 @@
 .swiper-button-next::before,
 .swiper-button-prev::before {
   display: block;
-  content: '';
+  content: "";
   position: relative;
   width: 100%;
   height: 1px;
@@ -194,7 +193,6 @@
   left: -30px;
 }
 
-
 .section1 {
   background-position: center top;
   padding: 200px 30px 350px;
@@ -202,7 +200,7 @@
 }
 
 .section1:before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 600px;
@@ -218,14 +216,14 @@
 
 .sec1_title {
   font-size: 64px;
-  font-family: 'PyeongChangPeace-Bold';
+  font-family: "PyeongChangPeace-Bold";
 }
 
 .sec1_txt {
   font-size: 20px;
 }
 
-.sec1_txt>strong {
+.sec1_txt > strong {
   margin-bottom: 3px;
 }
 
@@ -253,11 +251,11 @@
   position: relative;
 }
 
-.mv_text>strong {
+.mv_text > strong {
   font-size: 50px;
 }
 
-.mv_text>p {
+.mv_text > p {
   font-size: 18px;
 }
 
@@ -266,7 +264,8 @@
   height: auto;
 }
 
-.mySwiper2 .swiper-slide {}
+.mySwiper2 .swiper-slide {
+}
 
 .mySwiper2 .swiper-slide .slide_background {
   background-repeat: no-repeat;
@@ -279,7 +278,7 @@
 
 .mySwiper2 .swiper-slide .slide_background::before {
   display: block;
-  content: '';
+  content: "";
   width: 74px;
   height: 74px;
   background-image: url(../img/slide_imgbefore.png);
@@ -294,7 +293,7 @@
 
 .mySwiper2 .swiper-slide .slide_background::after {
   display: block;
-  content: '';
+  content: "";
   width: 230px;
   height: 229px;
   background-image: url(../img/slide_imgafter.png);
@@ -326,7 +325,7 @@
 
 .slide_title {
   font-size: 100px;
-  font-family: 'PyeongChangPeace-Bold';
+  font-family: "PyeongChangPeace-Bold";
   position: absolute;
   top: -100px;
   left: 50%;
@@ -335,7 +334,7 @@
 
 .slide_subTitle {
   font-size: 40px;
-  font-family: 'PyeongChang';
+  font-family: "PyeongChang";
   position: absolute;
   top: 50px;
   left: 50%;
@@ -343,8 +342,7 @@
   white-space: nowrap;
 }
 
-
-.slide_info>ul {
+.slide_info > ul {
   padding: 36px 15% 0 18%;
   box-sizing: border-box;
   width: 100%;
@@ -352,12 +350,12 @@
   flex-wrap: wrap;
 }
 
-.slide_info>ul>li {
+.slide_info > ul > li {
   width: 50%;
   margin-bottom: 40px;
 }
 
-.slide_info>ul>li>a {
+.slide_info > ul > li > a {
   display: block;
   width: 100%;
   height: 100%;
@@ -365,13 +363,13 @@
   position: relative;
 }
 
-.slide_info>ul>li>a:hover {
-  color: #C7B0C2;
+.slide_info > ul > li > a:hover {
+  color: #c7b0c2;
 }
 
-.slide_info>ul>li>a::before {
+.slide_info > ul > li > a::before {
   display: block;
-  content: '';
+  content: "";
   width: 13px;
   height: 13px;
   background: url(../img/star.png);
@@ -381,7 +379,7 @@
   transform: translateY(-50%);
 }
 
-.mySwiper2>.swiper-button-next2 {
+.mySwiper2 > .swiper-button-next2 {
   width: 50px;
   height: 50px;
   background-image: url(../img/button_w.png);
@@ -395,7 +393,7 @@
   cursor: pointer;
 }
 
-.mySwiper2>.swiper-button-prev2 {
+.mySwiper2 > .swiper-button-prev2 {
   width: 50px;
   height: 50px;
   background-image: url(../img/button_w.png);
@@ -490,12 +488,11 @@
   justify-content: space-between;
 }
 
-.menu_list>li {
+.menu_list > li {
   width: calc(100% / 6 - 23px);
-
 }
 
-.menu_list>li>a {
+.menu_list > li > a {
   display: block;
   width: 100%;
   height: 100%;
@@ -510,8 +507,8 @@
   transition: all 0.3s;
 }
 
-.menu_list>li>a:hover {
-  border: 2px solid #C7B0C2;
+.menu_list > li > a:hover {
+  border: 2px solid #c7b0c2;
 }
 
 .menu_txt {
@@ -552,7 +549,7 @@
   background-image: url(../img/menu_icon6.png);
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(80px);
@@ -561,10 +558,9 @@
     opacity: 3;
     transform: none;
   }
-
 }
 
-@keyframes fadeOut{
+@keyframes fadeOut {
   from {
     opacity: 3;
     transform: none;
@@ -573,48 +569,46 @@
     opacity: 0;
     transform: translateY(80px);
   }
-
 }
 
-.fadeIn05{
+.fadeIn05 {
   animation: fadeIn 0.5s ease-in-out;
   opacity: 1;
 }
 
-.fadeIn06{
+.fadeIn06 {
   animation: fadeIn 0.6s ease-in-out;
   opacity: 1;
 }
 
-.fadeIn07{
+.fadeIn07 {
   animation: fadeIn 0.7s ease-in-out;
   opacity: 1;
 }
 
-.fadeOut05{
+.fadeOut05 {
   animation: fadeOut 0.5s ease-in-out;
   opacity: 0;
 }
 
-.fadeOut06{
+.fadeOut06 {
   animation: fadeOut 0.6s ease-in-out;
   opacity: 0;
 }
 
-.fadeOut07{
+.fadeOut07 {
   animation: fadeOut 0.7s ease-in-out;
   opacity: 0;
 }
 
 /* 반응형 1280px */
 @media (max-width: 1280px) {
-  .slide_info>ul {
+  .slide_info > ul {
     padding: 36px 14% 0 17%;
   }
 }
 
 /* 반응형 1280px */
-
 
 /* 반응형 1199px */
 @media (max-width: 1199px) {
@@ -622,7 +616,7 @@
     width: 40%;
   }
 
-  .menu_list>li>a {
+  .menu_list > li > a {
     padding: 20px;
   }
 
@@ -632,7 +626,6 @@
 }
 
 /* 반응형 1199px */
-
 
 /* 반응형 1024px */
 @media (max-width: 1024px) {
@@ -656,16 +649,16 @@
     top: 113px;
   }
 
-  .right_txt>strong {
+  .right_txt > strong {
     font-size: 18px;
   }
 
-  .right_txt>p {
+  .right_txt > p {
     font-size: 14px;
     margin: 12px 0 56px;
   }
 
-  .openTime>p {
+  .openTime > p {
     font-size: 15px;
   }
 
@@ -713,15 +706,14 @@
     display: none;
   }
 
-  .slide_info>ul {
+  .slide_info > ul {
     padding: 36px 11% 0 12%;
   }
 
-  .mySwiper2>.swiper-button-next2,
-  .mySwiper2>.swiper-button-prev2 {
+  .mySwiper2 > .swiper-button-next2,
+  .mySwiper2 > .swiper-button-prev2 {
     top: 40%;
   }
-
 
   .sec4_title {
     width: 100%;
@@ -738,7 +730,7 @@
 
 /* 반응형 950px */
 @media (max-width: 950px) {
-  .slide_info>ul>li>a {
+  .slide_info > ul > li > a {
     font-size: 18px;
   }
 
@@ -746,7 +738,7 @@
     flex-wrap: wrap;
   }
 
-  .menu_list>li {
+  .menu_list > li {
     width: calc(100% / 3 - 34px);
     margin: 17px;
   }
@@ -760,17 +752,15 @@
     height: 53px;
   }
 
-  .img_slide .swiper-slide img{
+  .img_slide .swiper-slide img {
     width: 300px;
     height: 250px;
   }
 }
 
-
-
 /* 반응형 899px */
 @media (max-width: 899px) {
-  .noticeTitle>a {
+  .noticeTitle > a {
     margin-left: 0;
   }
 
@@ -778,7 +768,7 @@
     width: 50%;
   }
 
-  .notice_slide>.swiper-pagination {
+  .notice_slide > .swiper-pagination {
     right: 30px;
   }
 
@@ -790,7 +780,6 @@
 
 /* 반응형 899px */
 
-
 /* 반응형 768px */
 @media (max-width: 768px) {
   .youtube_inner {
@@ -799,7 +788,7 @@
     margin: 41px auto 0;
   }
 
-  .sec4_title{
+  .sec4_title {
     height: 250px;
   }
 
@@ -811,20 +800,16 @@
     font-size: 20px;
   }
 
-  .slide_info>ul {
+  .slide_info > ul {
     padding: 36px 4% 0 4%;
   }
 
-  .slide_info>ul>li>a {
+  .slide_info > ul > li > a {
     padding-left: 18px;
   }
 }
 
 /* 반응형 768px */
-
-
-
-
 
 /* 반응형 710px */
 @media (max-width: 710px) {
@@ -835,11 +820,11 @@
     text-align: center;
   }
 
-  .right_txt>strong {
+  .right_txt > strong {
     display: none;
   }
 
-  .right_txt>p {
+  .right_txt > p {
     display: none;
   }
 
@@ -855,16 +840,16 @@
     height: 330px;
   }
 
-  .slide_info>ul>li>a {
+  .slide_info > ul > li > a {
     font-size: 16px;
   }
 
-  .img_slide .swiper-slide img{
+  .img_slide .swiper-slide img {
     width: 200px;
     height: 170px;
   }
-  
-  .menu_list>li>a {
+
+  .menu_list > li > a {
     height: 160px;
   }
 
@@ -882,19 +867,19 @@
 
 /* 반응형 580px */
 @media (max-width: 580px) {
-  .section3{
+  .section3 {
     padding-bottom: 60px;
   }
-  .slide_info>ul {
+  .slide_info > ul {
     display: block;
   }
 
-  .slide_info>ul>li{
+  .slide_info > ul > li {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  .slide_info>ul>li>a {
+  .slide_info > ul > li > a {
     font-size: 17px;
   }
 }
@@ -925,7 +910,7 @@
     padding: 0 15px;
   }
 
-  .noticeTitle>a{
+  .noticeTitle > a {
     font-size: 18px;
   }
 
@@ -941,7 +926,7 @@
     display: none;
   }
 
-  .notice_slide>.swiper-pagination {
+  .notice_slide > .swiper-pagination {
     right: 15px;
   }
 
@@ -962,34 +947,34 @@
     margin-top: 23px;
   }
 
-  .mv_text>strong {
+  .mv_text > strong {
     font-size: 23px;
   }
 
-  .mv_text>p {
+  .mv_text > p {
     font-size: 15px;
     margin-top: 8px;
   }
 
-  .img_slide .swiper-slide img{
+  .img_slide .swiper-slide img {
     width: 100px;
     height: 80px;
   }
 
-  .sec4_title{
+  .sec4_title {
     height: 200px;
   }
 
-  .slide_info>ul>li>a {
+  .slide_info > ul > li > a {
     font-size: 14px;
   }
 
-  .menu_list>li {
+  .menu_list > li {
     width: calc(50% - 10px);
     margin: 10px 0;
   }
 
-  .menu_list>li>a {
+  .menu_list > li > a {
     height: 100px;
     font-size: 15px;
   }

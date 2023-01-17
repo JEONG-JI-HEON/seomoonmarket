@@ -33,7 +33,7 @@
             </a>
           </span>
           <span class="notice_date">
-            <%= toYear %>-<%= toMonth %>-<%= toDate %>
+            <%= toYear %>-<%= String(toMonth).padStart(2, '0') %>-<%= String(toDate).padStart(2, '0') %>
           </span>
         </div>
         <% }); %>

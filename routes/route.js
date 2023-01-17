@@ -100,7 +100,6 @@ router.post('/logininfo', (req, res) => {
   let login_pw = param['login_pw'];
   db.loginCheck(login_id, login_pw, (results)=>{
     if (results.length > 0){
-      console.log(results.length);
       res.send(`<script>alert("${login_id}님, 어서오세요."); document.location.href="/";</script>`)
     } else {
       res.send(`<script>alert("로그인 정보가 일치하지 않습니다."); document.location.href="/login";</script>`)

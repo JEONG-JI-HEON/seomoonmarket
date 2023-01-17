@@ -36,7 +36,7 @@
           <li class="date">
             <span>작성시간</span>
             <% let time = row.create_time; let toYear = time.getFullYear(); let toDate = time.getDate(); let toMonth = time.getMonth() + 1; %>
-            <%= toYear %>-<%= toMonth %>-<%= toDate %>
+            <%= toYear %>-<%= String(toMonth).padStart(2, '0') %>-<%= String(toDate).padStart(2, '0') %>
           </li>
           <li class="view_ctn">
             <span>조회수</span>
